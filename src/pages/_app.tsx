@@ -1,9 +1,11 @@
-import type { AppProps } from "next/app";
-import "tailwindcss/tailwind.css";
-// import "styles/global.less";
-require("styles/global.less");
+import type { AppProps } from 'next/app';
+import 'tailwindcss/tailwind.css';
+require('styles/global.less');
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
-export default MyApp;
+const App = ({ Component, pageProps }: AppProps): JSX.Element => (
+  <>
+    <Component {...pageProps} />
+  </>
+);
+
+export default App;
