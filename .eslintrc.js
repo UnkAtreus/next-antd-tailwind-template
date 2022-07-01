@@ -44,39 +44,5 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    'import/order': [
-      'error',
-      {
-        pathGroups: [
-          {
-            pattern: 'react',
-            group: 'external',
-            position: 'before',
-          },
-          {
-            pattern: 'next',
-            group: 'external',
-            position: 'after',
-          },
-          {
-            pattern: 'common/**',
-            group: 'internal',
-            position: 'after',
-          },
-          {
-            pattern: 'modules/**',
-            group: 'internal',
-            position: 'after',
-          },
-        ],
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-        pathGroupsExcludedImportTypes: ['react', 'next'],
-      },
-    ],
   },
 };
